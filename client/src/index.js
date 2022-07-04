@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore, compose, applyMiddleware } from "redux";
+import { legacy_createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
 
-const store = createStore(
+const store = legacy_createStore(
   reducers,
   compose(
     applyMiddleware(thunk),
