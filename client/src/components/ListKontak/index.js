@@ -27,21 +27,25 @@ function ListKontak() {
   }, [deleteKontakResult, dispatch]);
 
   return (
-    <div>
-      <h3>ListKontak</h3>
+    <div className="border rounded-lg p-4 m-4">
+      <h3 className="text-center text-xl">List Contact</h3>
       {getListKontakResult ? (
-        getListKontakResult.map((kontak) => {
+        getListKontakResult.map((kontak, i) => {
           return (
             <p key={kontak.id}>
               {" "}
-              {kontak.nama} - {kontak.nohp}
+              {i + 1}. {kontak.nama} - {kontak.nohp} - {kontak.address}
               <button
+                className="bg-red-500 rounded-lg p-2"
                 onClick={() => dispatch(deleteKontak(kontak.id))}
                 style={{ margin: "10px" }}
               >
                 Hapus
               </button>
-              <button onClick={() => dispatch(detailKontak(kontak))}>
+              <button
+                className=" bg-green-500 rounded-lg p-2"
+                onClick={() => dispatch(detailKontak(kontak))}
+              >
                 Edit
               </button>
             </p>

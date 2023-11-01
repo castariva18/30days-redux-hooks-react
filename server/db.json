@@ -1,19 +1,10 @@
 {
   "kontaks": [
     {
-      "nama": "Belmiro",
+      "nama": "Belmiro R",
       "nohp": "082130840218",
+      "address": "Jl. Sukapura no.10",
       "id": 1
-    },
-    {
-      "nama": "Fiqry",
-      "nohp": "081222790896",
-      "id": 2
-    },
-    {
-      "nama": "Aldi",
-      "nohp": "082165607625",
-      "id": 3
     }
   ]
 }
